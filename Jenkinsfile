@@ -5,7 +5,7 @@ pipeline
     stage('git clone')
     {
       steps{
-        //sh 'rm -rf TestJenkins'
+        sh 'rm -rf TestJenkins'
         sh 'git clone https://github.com/OctavianCN/TestJenkins.git'
       }
     }

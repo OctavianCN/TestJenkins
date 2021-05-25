@@ -4,20 +4,28 @@ pipeline
   stages{
     stage('git clone')
     {
-      //sh 'rm -rf TestJenkins'
-      sh 'git clone https://github.com/OctavianCN/TestJenkins.git'
+      steps{
+        //sh 'rm -rf TestJenkins'
+        sh 'git clone https://github.com/OctavianCN/TestJenkins.git'
+      }
     }
     stage('install express')
     {
-      sh 'npm install express'
+      steps{
+        sh 'npm install express'
+      }
     }
     stage('build app')
     {
-      sh 'node app.js'
+      steps{
+        sh 'node app.js'
+      }
     }
     stage('test app')
     {
-      sh 'curl -i localhost:3000'
+      steps{
+        sh 'curl -i localhost:3000'
+      }
     }
   }
 }

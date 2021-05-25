@@ -15,15 +15,10 @@ pipeline
         sh 'npm install express'
       }
     }
-    stage('build app')
+    stage('build and test app')
     {
       steps{
         sh 'node app.js'
-      }
-    }
-    stage('test app')
-    {
-      steps{
         sh 'curl -i localhost:3000'
       }
     }

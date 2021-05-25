@@ -4,7 +4,7 @@ pipeline
   stages{
     stage('git clone')
     {
-      sh 'rmdir -r TestJenkins'
+      sh 'rm -rf TestJenkins'
       sh 'git clone https://github.com/OctavianCN/TestJenkins.git'
     }
     stage('install express')

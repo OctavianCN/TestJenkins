@@ -22,11 +22,5 @@ pipeline
         sh '/test.sh'
       }
     }
-    stage('run app')
-    {
-      steps{
-        sh 'node app.js'
-      }
-    }
   }
 }

@@ -15,7 +15,14 @@ pipeline
         sh 'npm install express'
       }
     }
-    stage('build and test app')
+    stage('test app')
+    {
+      steps{
+        sh 'cat /test.sh'
+        sh '/test.sh'
+      }
+    }
+    stage('run app')
     {
       steps{
         sh 'node app.js'

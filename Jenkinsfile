@@ -19,6 +19,7 @@ pipeline
     {
       steps{
         sh 'rm test.sh'
+        sh 'rm test2.sh'
         sh 'cp /test.sh .'
         sh 'cp /test2.sh .'
         sh 'cat test.sh'

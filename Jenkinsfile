@@ -18,8 +18,9 @@ pipeline
     stage('test app')
     {
       steps{
-        sh 'cat /test.sh'
-        sh '/test.sh'
+        sh 'cp /test.sh .'
+        sh 'cat test.sh'
+        sh './test.sh'
       }
     }
   }

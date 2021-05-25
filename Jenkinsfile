@@ -18,8 +18,7 @@ pipeline
     stage('build and test app')
     {
       steps{
-        sh 'timeout -f node app.js'
-        sh 'curl -i localhost:3000'
+        sh 'node app.js'
       }
     }
   }

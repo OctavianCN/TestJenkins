@@ -13,6 +13,7 @@ pipeline
     {
       steps{
         sh 'npm install express'
+        sh 'ls'
       }
     }
     stage('test app')
